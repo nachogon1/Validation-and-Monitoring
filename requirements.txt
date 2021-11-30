@@ -1,0 +1,7 @@
+pydantic
+pytest
+FastAPI
+uvicorn
+langcodes
+pytz
+black
