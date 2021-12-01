@@ -32,6 +32,7 @@ class Event(BaseModel):
 
     @validator("context_app_version")
     def check_context_app_version(cls, v):
+        """Validate that version is of the form x.x.x where x are numbers."""
         version_rule = re.compile("^[0-9]+\.[0-9]+\.[0-9]+$")
         if version_rule.match(v) or v == "latest":
             return v
@@ -40,6 +41,7 @@ class Event(BaseModel):
 
     @validator("context_locale", "context_traits_taxfix_language")
     def check_langcodes(cls, v):
+        """Validate that the language code is correct."""
         if tag_is_valid(v):
             return v
         else:
@@ -47,6 +49,7 @@ class Event(BaseModel):
 
     @validator("context_timezone")
     def check_timezones(cls, v):
+        """Validate that the timezone is correct."""
         if v in pytz.all_timezones:
             return v
         else:

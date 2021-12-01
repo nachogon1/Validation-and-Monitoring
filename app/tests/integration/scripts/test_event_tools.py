@@ -29,5 +29,5 @@ def test_generate_report(caplog):
     )
     assert result.exit_code == 0
     assert caplog.messages == [
-        "Event submission_success cooccur with 1 events at 01/30/2018."
+        "Event submission_success happens 1 times at 01/30/2018."
     ]
