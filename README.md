@@ -37,13 +37,13 @@ bash destroy_develop.sh
 
 After that, run this command to start the *app*. It will run on port 8000. All commands below are supposed to be run from the container.
 
-From linux. Run to start the **app**.
+From linux. Run to start the **app**:
 
 ```
 uvicorn app.main:app
 ```
 
-From Mac. Run to start the **app**.:
+From Mac. Run to start the **app**:
 
 ```
 uvicorn app.main:app --host="0.0.0.0"
