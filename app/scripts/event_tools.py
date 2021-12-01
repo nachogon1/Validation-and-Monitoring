@@ -1,16 +1,12 @@
 import datetime
 import json
-
-import click
-from pydantic import ValidationError
-
-from models.event import Event
-
-from loguru import logger
-
 import os
 
+import click
 from core.config import LOG_PATH
+from loguru import logger
+from models.event import Event
+from pydantic import ValidationError
 
 
 @click.group()

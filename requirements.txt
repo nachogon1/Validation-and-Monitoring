@@ -1,11 +1,22 @@
-pydantic==1.8.2
+# Testing
 pytest==6.2.5
+loguru-caplog==0.2.0
+
+#APIS
 fastapi==0.70.0
 uvicorn==0.15.0
-langcodes==3.3.0
-click==8.0.3
-pytz==2021.3
-black==21.11b1
-loguru==0.5.3
-loguru-caplog==0.2.0
 requests==2.26.0
+
+# Validation
+langcodes==3.3.0
+pytz==2021.3
+pydantic==1.8.2
+
+# Scripts
+click==8.0.3
+loguru==0.5.3
+
+# Refactor
+black==21.11b1
+isort==5.10.1
+flake8==4.0.1

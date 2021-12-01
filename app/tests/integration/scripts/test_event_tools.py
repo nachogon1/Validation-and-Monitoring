@@ -1,6 +1,5 @@
 from click.testing import CliRunner
 from loguru import logger
-
 from loguru_caplog import loguru_caplog as caplog
 
 
