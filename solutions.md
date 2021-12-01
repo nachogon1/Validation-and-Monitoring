@@ -13,13 +13,13 @@ continue to next line of data
 
 For **objective 1**, The schema is defined under `/app/models/event.py`. I created the schema based on a provided input.json. In addition, I have added custom validators for the "context_version", the language code fields and the timezone field.
 
-To validate the JSON events use the API or the CLI. Go to * [Installing](./README.md) for its functioning. The output will be either a response or a standard error log indicating which event does not fulfil the schema.
+To validate the JSON events use the API or the CLI script. Go to * [Installing](./README.md) for its functioning. The output will be either a response or a standard error log indicating which event does not fulfil the schema. The CLI script will open the event file as an iterator to save memory.
 
-If you prefer to see the schema as a JSON you can get it from the API in swagger.
+If you want to see the schema as a JSON you can get it from the API in swagger.
 
 Notes:
 
-In comparison to other schema validators, I used pydantic since it offers models with dot notation, has pythonic notation using type hinting notation; has more than 8k of stars in GitHub, and it is actively developed; is easily integrable with FastAPI which is a modern, async framework for building API's.
+In comparison to other schema validators, I used pydantic since it offers models with dot notation, it has pythonic notation using type hinting notation, it has more than 8k of stars in GitHub, and it is actively developed, it is easily integrable with FastAPI which is a modern, async framework for building API's.
 
 ## Objective 2: Generate a report with the count of each 'event' in the file
 
@@ -37,7 +37,7 @@ The solution is logged out and added under `/app/logs/report_log.log` and writte
 
 Notes:
 
-I use loguru for the logging and we will open files as an iterator since it won't fit in memory. In addition, we assume that the data is not sorted. 
+We will open files as an iterator since it won't fit in memory. In addition, we assume that the data is not sorted. 
 
 The algorithm aggregates all the events by name and timestamp, for that purpose needs to keep a count of the events for each date. We could save some memory if we sorted the data with some big data algorithm like unix `sort` beforehand since we could treat the data by chunks.
 Another way to save some memory would be eliminating useless fields beforehand.
