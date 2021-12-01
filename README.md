@@ -4,6 +4,8 @@ Containerized python application for validating custom schema json events.
 
 # How to use
 
+From your terminal:
+
 ```
 git clone https://github.com/nachogon1/Validation-and-Monitoring.git
 cd Validation-and-Monitoring
@@ -60,6 +62,11 @@ export YOUR_PATH="/app/app/data/input.json"
 
 The results will be written under `/app/app/data/report_log_1.log` .
 
+To delete the container run
+
+```
+bash destroy_develop.sh
+```
 
 
 # Objectives
