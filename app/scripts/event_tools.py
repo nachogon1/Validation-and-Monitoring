@@ -57,7 +57,7 @@ def generate_report(ctx, file):
                         daily_count[event.event] = 1
                 else:
                     daily_count = {event.event: 1}
-                count_dict[event.original_timestamp.date()] = daily_count
+                count_dict[event_date] = daily_count
             except ValidationError:
                 # Skip wrong data
                 continue
