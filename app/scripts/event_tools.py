@@ -47,13 +47,18 @@ def generate_report(ctx, file):
             try:
                 event = Event(**json.loads(line))
                 if count_dict.get(event.original_timestamp.date()):
-                    count_dict[event.original_timestamp.date()] += [event.id]
+                    daily_count = count_dict[event.original_timestamp.date()]
+                    daily_count["events"].add(event.event)
+                    daily_count["counter"] += 1
+
                 else:
-                    count_dict[event.original_timestamp.date()] = [event.id]
+                    daily_count = {"events": set([event.event]), "counter": 1}
+
+                count_dict[event.original_timestamp.date()] = daily_count
             except ValidationError:
                 continue
         for date in count_dict:
-            for id in count_dict[date]:
+            for event in count_dict[date]["events"]:
                 logger.bind(executed=script_runtime, name=id).info(
-                    f"Event {id} cooccur with {len(count_dict[date])} events at {date.strftime('%m/%d/%Y')}."
+                    f"Event {event} cooccur with {count_dict[date]['counter']} events at {date.strftime('%m/%d/%Y')}."
                 )

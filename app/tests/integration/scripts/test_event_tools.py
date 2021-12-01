@@ -28,4 +28,6 @@ def test_generate_report(caplog):
         obj=logger,
     )
     assert result.exit_code == 0
-    assert caplog.messages == ["Event FB16866D-AE4D-416F-8848-122B07DA42F5 cooccur with 1 events at 01/30/2018."]
+    assert caplog.messages == [
+        "Event submission_success cooccur with 1 events at 01/30/2018."
+    ]
