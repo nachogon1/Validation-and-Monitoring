@@ -77,7 +77,7 @@ If you want to run my custom event json run:
 export YOUR_PATH="/app/app/data/input.json"
 ```
 
-The results will be written under `/app/app/logs/report_log.log` and `/app/app/data/report_events.csv` .
+The results will be written under `/app/logs/report_log.log` and `/app/data/report_events.csv` .
 
 
 ### Testing
