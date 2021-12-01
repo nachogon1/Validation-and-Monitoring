@@ -19,10 +19,17 @@ bash develop.sh
 
 All the commands below are supposed to be run from the container.
 
-Run to start the **app**.
+From linux. Run to start the **app**.
 ```
 uvicorn app.main:app
 ```
+
+From Mac. You might need to change `--network host` for `--network bridge` at develop.sh and run:
+
+```
+uvicorn app.main:app --host="0.0.0.0"
+```
+
 
 Then, you can open **swagger** in your browser under http:127.0.0.1:8000/docs, 
 where you can validate JSON events.
