@@ -1,2 +1,7 @@
 event_name;concurrent_events;date
 submission_success;01/30/2018;1
+fake_event_1;01/30/2018;2
+registration_initiated;02/03/2018;3
+fake_event_2;02/03/2018;1
+fake_event_3;04/01/2018;1
+registration_initiated;02/20/2025;1

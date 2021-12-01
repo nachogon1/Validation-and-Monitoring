@@ -1,6 +1,6 @@
-2021-12-01 19:09:27.663224 INFO Event submission_success happens 1 times at 01/30/2018.
-2021-12-01 19:09:27.663224 INFO Event fake_event_1 happens 2 times at 01/30/2018.
-2021-12-01 19:09:27.663224 INFO Event registration_initiated happens 3 times at 02/03/2018.
-2021-12-01 19:09:27.663224 INFO Event fake_event_2 happens 1 times at 02/03/2018.
-2021-12-01 19:09:27.663224 INFO Event fake_event_3 happens 1 times at 04/01/2018.
-2021-12-01 19:09:27.663224 INFO Event registration_initiated happens 1 times at 02/20/2025.
+2021-12-01 19:59:10.275635 INFO Event submission_success happens 1 times at 01/30/2018.
+2021-12-01 19:59:10.275635 INFO Event fake_event_1 happens 2 times at 01/30/2018.
+2021-12-01 19:59:10.275635 INFO Event registration_initiated happens 3 times at 02/03/2018.
+2021-12-01 19:59:10.275635 INFO Event fake_event_2 happens 1 times at 02/03/2018.
+2021-12-01 19:59:10.275635 INFO Event fake_event_3 happens 1 times at 04/01/2018.
+2021-12-01 19:59:10.275635 INFO Event registration_initiated happens 1 times at 02/20/2025.
