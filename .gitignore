@@ -2,3 +2,4 @@
 .idea*
 app.egg-info*
 report_1.log
+__pycache__*
