@@ -1,4 +1,6 @@
 def test_validate_event_schema(test_client):
+
+    # Check against a correct event.
     response = test_client.post(
         "/api/events/checker",
         json=[
@@ -29,6 +31,7 @@ def test_validate_event_schema(test_client):
     )
     assert response.status_code == 200
 
+    # Check that the schema finds the error.
     response = test_client.post(
         "/api/events/checker",
         json=[
