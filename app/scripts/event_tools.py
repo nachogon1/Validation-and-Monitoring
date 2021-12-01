@@ -1,3 +1,4 @@
+import datetime
 import json
 
 import click
@@ -18,7 +19,7 @@ def main(ctx):
     """Script cli."""
     logger.add(
         f"{LOG_PATH}",
-        format="{time} {level} {extra[name]} {extra[time]} {message}",
+        format="{extra[executed]} {level} {message}",
     )
     ctx.obj = logger
 
@@ -44,6 +45,7 @@ def generate_report(ctx, file):
     """Create report from events file with name of event, date, count of events"""
     logger = ctx.obj
     count_dict = {}
+    script_runtime = datetime.datetime.utcnow()
     with open(file) as file:  # Open file as an iterator to save memory.
         for line in file:
             try:
@@ -56,6 +58,6 @@ def generate_report(ctx, file):
                 continue
         for date in count_dict:
             for id in count_dict[date]:
-                logger.bind(name=id, time=date.strftime("%m/%d/%Y")).info(
-                    f" has {len(count_dict[date])} events on the same date."
+                logger.bind(executed=script_runtime, name=id).info(
+                    f"Event {id} cooccur with {len(count_dict[date])} events at {date.strftime('%m/%d/%Y')}."
                 )
