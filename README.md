@@ -61,13 +61,13 @@ events-tools --help
 
 Place your json events anywhere in the project and run:
 
-For validating the events JSON.
+For validating the events JSON:
 
 ```
 events-tools validate-json --file $YOUR_PATH
 ```
 
-For generating the reports of the JSON events.
+For generating the reports of the JSON events:
 
 ```
 events-tools generate-report --file $YOUR_PATH
