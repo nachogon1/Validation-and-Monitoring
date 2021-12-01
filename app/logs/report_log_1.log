@@ -1,24 +1,2 @@
-2021-12-01T08:51:23.689983+0000 INFO FB16866D-AE4D-416F-8848-122B07DA42F5 01/30/2018  has 3 events on the same date.
-2021-12-01T08:51:23.690253+0000 INFO fake-id-2 01/30/2018  has 3 events on the same date.
-2021-12-01T08:51:23.690469+0000 INFO fake-id-4 01/30/2018  has 3 events on the same date.
-2021-12-01T08:51:23.690645+0000 INFO AED96FC7-19F1-46AB-B79F-D412117119BD 02/03/2018  has 3 events on the same date.
-2021-12-01T08:51:23.690802+0000 INFO fake-id-3 02/03/2018  has 3 events on the same date.
-2021-12-01T08:51:23.690954+0000 INFO fake-id-5 02/03/2018  has 3 events on the same date.
-2021-12-01T08:51:35.958069+0000 INFO FB16866D-AE4D-416F-8848-122B07DA42F5 01/30/2018  has 3 events on the same date.
-2021-12-01T08:51:35.958328+0000 INFO fake-id-2 01/30/2018  has 3 events on the same date.
-2021-12-01T08:51:35.958551+0000 INFO fake-id-4 01/30/2018  has 3 events on the same date.
-2021-12-01T08:51:35.958762+0000 INFO AED96FC7-19F1-46AB-B79F-D412117119BD 02/03/2018  has 3 events on the same date.
-2021-12-01T08:51:35.958968+0000 INFO fake-id-3 02/03/2018  has 3 events on the same date.
-2021-12-01T08:51:35.959170+0000 INFO fake-id-5 02/03/2018  has 3 events on the same date.
-2021-12-01 09:03:37.290746 INFO FB16866D-AE4D-416F-8848-122B07DA42F5 01/30/2018  has 3 events on the same date.
-2021-12-01 09:03:37.290746 INFO fake-id-2 01/30/2018  has 3 events on the same date.
-2021-12-01 09:03:37.290746 INFO fake-id-4 01/30/2018  has 3 events on the same date.
-2021-12-01 09:03:37.290746 INFO AED96FC7-19F1-46AB-B79F-D412117119BD 02/03/2018  has 3 events on the same date.
-2021-12-01 09:03:37.290746 INFO fake-id-3 02/03/2018  has 3 events on the same date.
-2021-12-01 09:03:37.290746 INFO fake-id-5 02/03/2018  has 3 events on the same date.
-2021-12-01 09:59:18.654551 INFO Event FB16866D-AE4D-416F-8848-122B07DA42F5 cooccur with 3 events at 01/30/2018.
-2021-12-01 09:59:18.654551 INFO Event fake-id-2 cooccur with 3 events at 01/30/2018.
-2021-12-01 09:59:18.654551 INFO Event fake-id-4 cooccur with 3 events at 01/30/2018.
-2021-12-01 09:59:18.654551 INFO Event AED96FC7-19F1-46AB-B79F-D412117119BD cooccur with 3 events at 02/03/2018.
-2021-12-01 09:59:18.654551 INFO Event fake-id-3 cooccur with 3 events at 02/03/2018.
-2021-12-01 09:59:18.654551 INFO Event fake-id-5 cooccur with 3 events at 02/03/2018.
+2021-12-01 17:00:17.570348 INFO Event submission_success cooccur with 3 events at 01/30/2018.
+2021-12-01 17:00:17.570348 INFO Event registration_initiated cooccur with 3 events at 02/03/2018.
