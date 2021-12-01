@@ -33,7 +33,7 @@ In comparison to other schema validators, I used pydantic since it offers models
 For **objective 2**, I created the `generate-report` script to generate the count of the concurrent events.
 
 To get the reports of the CLI. Go to * [Installing](./README.md) for its functioning.
-The solution is logged out and added under `/app/logs/report_log.log` and written as a csv under `/app/data/report_log.log`.
+The solution is logged out and added under `/app/logs/scripts_log.log` and written as a csv under `/app/data/scripts_log.log`.
 
 Notes:
 
