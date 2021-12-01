@@ -17,4 +17,19 @@ For objective 1, in comparison to other schema validators, I will use pydantic s
 has pythonic notation using type hintinng notation, has more than 8k of stars in github,
 and it is actively developed, is easily integrable with FastAPI which is a modern, async framework for building API's.
 
-For objective 2, I will use loguru and we will open files as an interator.
+For objective 2, I will use loguru for the logging and we will open files as an interator.
+To get the date agregation of each event we assume that the events are not necessarily sorted.
+We have to possibilities, the first one consists in sorting the events beforehand by some efficient
+algorithm like unix sort, iterate over events the storing the ids, and log them out at the beginning of the next chunk.
+This approach add some complexity time overhead O(n*log(n)), but we only need to save the ids from one chunk.
+The second possibilty is to iterate over all the unsorted events, save all the ids under its respective timestamp and
+at the end of the file, log them all out. To get into situation, a python occupies 1 byte, therefore if we had a normal RAM of 16gb, we could
+do reports of approximately 44 millions of events without worrying about memory. To properly choose between one or 
+another I would need to have more information like the cloud provider and how it is intended to be use.
+
+I will procceed with the second possibility since I am not sure of the format of the input data.
+I find missleading that the input.json is not a real JSON.
+
+
+For maximum efficiency we could use some technics to remove useless json fields trading some complexity time for
+memory since we only need the name and timestamp.
