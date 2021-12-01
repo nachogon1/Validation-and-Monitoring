@@ -1,8 +1,7 @@
 from typing import List
 
 from fastapi import APIRouter
-
-from app.models.event import Event
+from models.event import Event
 
 event_router = APIRouter()
 

@@ -7,10 +7,6 @@ import pytz
 from pydantic import BaseModel, validator
 
 
-class ContextLocales(Enum):
-    langcodes
-
-
 class Event(BaseModel):
     id: str
     received_at: datetime
