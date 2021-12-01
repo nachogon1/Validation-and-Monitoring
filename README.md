@@ -3,9 +3,15 @@ Containerized python application for validating custom schema json events.
 
 
 # How to use
+
+```
+git clone https://github.com/nachogon1/Validation-and-Monitoring.git
+cd Validation-and-Monitoring
+```
+
 Run to create an image and get inside the container:
 ```
-bash check.sh
+bash develop.sh
 ```
 
 
@@ -73,6 +79,8 @@ In addition, I have added custom validators for the "context_version", the langu
 
 To validate the json events use the API or the CLI. Go to "How to use" for its functioning. The output will be either
 a response or a standard error log indicating which event does not fulfill the schema.
+
+If you prefer to see the schema as a json you can get it from the api in swagger.
 
 Notes:
 
