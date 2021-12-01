@@ -21,11 +21,13 @@ git clone https://github.com/nachogon1/Validation-and-Monitoring.git
 cd Validation-and-Monitoring
 ```
 
-Run this command to create a docker image and get inside its container:
+Run this command to create a docker image and get inside its container (read below if you are using a mac):
 
 ```
 bash develop.sh
 ```
+
+From Mac. You might need to change `--network host` for `--network bridge` at develop.sh 
 
 To delete the container and the image run this command:
 
@@ -41,7 +43,7 @@ From linux. Run to start the **app**.
 uvicorn app.main:app
 ```
 
-From Mac. You might need to change `--network host` for `--network bridge` at develop.sh and run:
+From Mac. Run to start the **app**.:
 
 ```
 uvicorn app.main:app --host="0.0.0.0"
@@ -49,14 +51,15 @@ uvicorn app.main:app --host="0.0.0.0"
 
 Once started, you can navigate to http:127.0.0.1:8000/docs or http://localhost/docs to view the Swagger documentation.
 
-To run the scripts:
-For help you can run:
+To run the scripts (from the container terminal):
+
+For help, you can run:
 
 ```
 events-tools --help 
 ```
 
-Place your json events under anywhere in the project and run:
+Place your json events anywhere in the project and run:
 
 ```
 events-tools validate-json --file $YOUR_PATH
@@ -74,10 +77,7 @@ If you want to run my custom event json run:
 export YOUR_PATH="/app/app/data/input.json"
 ```
 
-
-
-
-The results will be written under `/app/app/data/report_log.log` .
+The results will be written under `/app/app/logs/report_log.log` and `/app/app/data/report_events.csv` .
 
 
 ### Testing
