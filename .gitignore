@@ -1,3 +1,4 @@
 .pytest*
 .idea*
 app.egg-info*
+.logs*
