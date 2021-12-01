@@ -49,7 +49,7 @@ From Mac. Run to start the **app**.:
 uvicorn app.main:app --host="0.0.0.0"
 ```
 
-Once started, you can navigate to http:127.0.0.1:8000/docs or http://localhost/docs to view the Swagger documentation.
+Once started, you can navigate to http://127.0.0.1:8000/docs or http://localhost/docs to view the Swagger documentation.
 
 To run the scripts (from the container terminal):
 
