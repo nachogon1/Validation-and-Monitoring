@@ -39,6 +39,6 @@ def test_event_model(event, wanted_result):
 
     try:
         Event.validate(event)
-        assert True == wanted_result
+        assert wanted_result
     except ValidationError:
-        assert False == wanted_result
+        assert not wanted_result

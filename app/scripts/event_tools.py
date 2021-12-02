@@ -2,12 +2,10 @@ import datetime
 import json
 
 import click
-from core.config import LOG_PATH
+from core.config import LOG_PATH, REPORT_EVENTS_PATH
 from loguru import logger
 from models.event import Event
 from pydantic import ValidationError
-
-from core.config import REPORT_EVENTS_PATH
 
 
 @click.group()
@@ -17,7 +15,7 @@ def main(ctx):
     logger.add(
         f"{LOG_PATH}",
         format="{extra[executed]} {level} {message}",
-        level="INFO"
+        level="INFO",
     )
     ctx.obj = logger
 
@@ -71,5 +69,6 @@ def generate_report(ctx, file):
                     logger.bind(executed=script_runtime).info(
                         f"Event {event} happens {count_dict[date][event]} times at {date.strftime('%m/%d/%Y')}."
                     )
-                    report.write(f"{event};{date.strftime('%m/%d/%Y')};{count_dict[date][event]}\n")
-
+                    report.write(
+                        f"{event};{date.strftime('%m/%d/%Y')};{count_dict[date][event]}\n"
+                    )
